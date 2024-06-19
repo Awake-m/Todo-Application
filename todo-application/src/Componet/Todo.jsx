@@ -31,11 +31,12 @@ function Todo() {
       setArr(d)
     }
     return (
-      <div className='box1'>
+      <div >
+        <div className='box1'>
         <br></br><br></br>
           <input type="text" placeholder='Task' onChange={(e)=>setTask(e.target.value)} />
           <br></br><br></br>
-          <button onClick={handleClick}>Add</button>
+          <button onClick={handleClick}>Add</button><br></br></div>
           {
               arr.map((el)=>{
                   return <Todolist key={el.id} data={el} hdlt={handleDelete} hupd={handleUpdate}/>
